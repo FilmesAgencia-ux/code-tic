@@ -7,4 +7,3 @@ compatibility_date = "2025-09-22"
 # Configuração para servir arquivos estáticos
 [site]
 bucket = "./"  # pasta onde estão os HTML, CSS, JS
-entry-point = "workers-site"    
