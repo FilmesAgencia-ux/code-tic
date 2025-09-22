@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code++ | Aprenda Programação</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Inter', sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; }
+
+    header {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; }
+
+    header img {
+      position: absolute;
+      bottom: -9px;
+      right: 2px;
+      width: 100px;
+      max-width: 30%;
+    }
+
+    nav {
+      background: #1e293b;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #e2e8f0;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #6366f1; }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 30px auto;
+    }
+    section h2 { color: #a78bfa; text-align: center; margin-bottom: 20px; font-size: 2rem; }
+    section h3 { text-align: center; margin-bottom: 20px; font-weight: 500; }
+    section ul p {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(99,102,241,0.4);
+    }
+    .card img { width: 80px; margin-bottom: 15px; }
+
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #334155;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Code++</h1>
+  <p>Aprenda Programação e TIC de forma simples e prática 🚀</p>
+  <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Boneco Programador">
+</header>
+
+<nav>
+  <a href="index.html">Início</a>
+  <a href="sobre.html">Sobre Nós</a>
+  <a href="cursos.html">Cursos</a>
+  <a href="aulas.html">Aulas</a>
+  <a href="blog.html">Blog</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<section>
+  <h2>🎈 Bem-vindo ao Code++</h2>
+  <h3>No Code++ você encontra cursos, artigos e conteúdos práticos sobre programação e TIC.</h3>
+
+  <div class="cards">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/128/82/82127.png" alt="HTML CSS">
+      <h3>HTML & CSS</h3>
+      <p>Aprenda a criar sites bonitos e responsivos do zero.</p>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" alt="JavaScript">
+      <h3>JavaScript</h3>
+      <p>Deixe seus sites interativos e dinâmicos com JS.</p>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="TIC">
+      <h3>TIC Básico</h3>
+      <p>Entenda conceitos essenciais de tecnologia da informação e comunicação.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Code++ | Ensino de Programação e TIC</p>
+</footer>
+
+</body>
+</html>
+  
