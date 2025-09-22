@@ -2,3 +2,4 @@ name = "code-tic"          # nome do Worker
 type = "javascript"           # ou "typescript" se for TS
 account_id = "d1981790c750476d614abdf6ea6f428d" # pegue na sua conta Cloudflare
 workers_dev = true            # true para deploy em workers.dev
+main = "index.html"
