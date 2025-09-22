@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursos | Code++</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: 'Inter', sans-serif; background: #0f172a; color: #e2e8f0; line-height:1.6; }
+
+header {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+  position: relative;
+}
+header h1 { font-size: 2.8rem; margin-bottom:10px; }
+header img { position:absolute; right:16px; bottom:-10px; width:115px; }
+
+nav {
+  background:#1e293b;
+  padding:15px;
+  text-align:center;
+  position: sticky;
+  top:0;
+  z-index:1000;
+}
+nav a { color:#e2e8f0; margin:0 15px; text-decoration:none; font-weight:600; transition:0.3s; }
+nav a:hover { color:#6366f1; }
+
+section {
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+}
+section h2 { text-align:center; color:#a78bfa; margin-bottom:30px; font-size:2rem; }
+section h3 { text-align:center; margin-bottom:20px; }
+
+.cards {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap:20px;
+}
+
+.card {
+  background:#1e293b;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #334155;
+  text-align:center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(99,102,241,0.4);
+}
+.card img { width:80px; margin-bottom:15px; }
+
+button {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color:#fff;
+  padding:12px 25px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
+  margin-top:10px;
+}
+button:hover { background: linear-gradient(135deg, #4f46e5, #7c3aed); }
+
+.course-detalhado {
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition:max-height 0.5s ease, opacity 0.5s ease;
+  margin-top:15px;
+}
+.course-detalhado.show { max-height:1000px; opacity:1; }
+
+footer {
+  background:#0f172a;
+  color:#94a3b8;
+  text-align:center;
+  padding:25px;
+  border-top:1px solid #334155;
+  margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cursos Code++</h1>
+  <img src="https://cdn-icons-png.flaticon.com/128/1051/1051277.png" alt="Boneco Programador">
+</header>
+
+<nav>
+  <a href="index.html">Início</a>
+  <a href="sobre.html">Sobre Nós</a>
+  <a href="cursos.html">Cursos</a>
+  <a href="aulas.html">Aulas</a>
+  <a href="blog.html">Blog</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<section>
+<h2>📚 Nossos Cursos</h2>
+
+<div class="cards">
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Programação">
+    <h3>Introdução à Programação</h3>
+    <p>Aprenda lógica de programação do zero, com exercícios práticos.</p>
+    <p><strong>Preço: R$0,00</strong></p>
+    <button onclick="toggleCourse('curso1')">Ler mais</button>
+    <div id="curso1" class="course-detalhado">
+      <h4>Detalhes do Curso</h4>
+      <ul>
+        <li>Conceitos básicos de lógica</li>
+        <li>Algoritmos simples</li>
+        <li>Como resolver problemas passo a passo</li>
+      </ul>
+      <button onclick="abrirVideoCurso('curso1-video')">Assistir Curso</button>
+      <div id="curso1-video" style="margin-top:15px;"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/128/1051/1051277.png" alt="HTML CSS">
+    <h3>HTML & CSS</h3>
+    <p>Construa sites bonitos e responsivos.</p>
+    <p><strong>Preço: R$10,00</strong></p>
+    <button onclick="toggleCourse('curso2')">Ler mais</button>
+    <div id="curso2" class="course-detalhado">
+      <h4>Detalhes do Curso</h4>
+      <ul>
+        <li>Estrutura HTML básica</li>
+        <li>Estilização com CSS</li>
+        <li>Layout responsivo</li>
+      </ul>
+      <button onclick="alert('Compra realizada! Você pagou R$10,00.')">Comprar Curso</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" alt="JavaScript">
+    <h3>JavaScript Básico</h3>
+    <p>Dê vida aos seus sites com interatividade.</p>
+    <p><strong>Preço: R$10,00</strong></p>
+    <button onclick="toggleCourse('curso3')">Ler mais</button>
+    <div id="curso3" class="course-detalhado">
+      <h4>Detalhes do Curso</h4>
+      <ul>
+        <li>Variáveis e tipos de dados</li>
+        <li>Funções e eventos</li>
+        <li>Manipulação do DOM</li>
+      </ul>
+      <button onclick="alert('Compra realizada! Você pagou R$10,00.')">Comprar Curso</button>
+    </div>
+  </div>
+</div>
+</section>
+
+<script>
+function toggleCourse(id) {
+  const course = document.getElementById(id);
+  course.classList.toggle('show');
+}
+function abrirVideoCurso(id) {
+  const container = document.getElementById(id);
+  container.innerHTML = `<iframe width="100%" height="400" src="https://www.youtube.com/embed/IQ1DjZbwKOc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+}
+</script>
+
+<footer>
+<p>&copy; 2025 Code++ | Ensino de Programação e TIC</p>
+</footer>
+
+</body>
+</html>

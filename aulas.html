@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aulas | Code++</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: 'Inter', sans-serif; background: #0f172a; color: #e2e8f0; line-height:1.6; }
+
+header {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+  position: relative;
+}
+header h1 { font-size: 2.8rem; margin-bottom:10px; font-weight:700; }
+header img { position:absolute; right:50px; bottom:-10px; width:120px; }
+
+nav {
+  background:#1e293b;
+  padding:15px;
+  text-align:center;
+  position: sticky;
+  top:0;
+  z-index:1000;
+}
+nav a { color:#e2e8f0; margin:0 15px; text-decoration:none; font-weight:600; transition:0.3s; }
+nav a:hover { color:#6366f1; }
+
+section {
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+}
+section h2 { 
+  text-align:center; 
+  color:#a78bfa; 
+  margin-bottom:30px; 
+  font-size:2rem; 
+  font-weight:600; /* igual aos cursos */
+}
+section h3 { text-align:center; margin-bottom:20px; }
+
+.cards {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap:20px;
+}
+
+.card {
+  background:#1e293b;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #334155;
+  text-align:center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(99,102,241,0.4);
+}
+.card img { width:80px; margin-bottom:15px; }
+
+button {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color:#fff;
+  padding:12px 25px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
+  margin-top:10px;
+}
+button:hover { background: linear-gradient(135deg, #4f46e5, #7c3aed); }
+
+.course-detalhado {
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition:max-height 0.5s ease, opacity 0.5s ease;
+  margin-top:15px;
+  text-align:left;
+}
+.course-detalhado.show { max-height:1000px; opacity:1; }
+
+footer {
+  background:#0f172a;
+  color:#94a3b8;
+  text-align:center;
+  padding:25px;
+  border-top:1px solid #334155;
+  margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Aulas Code++</h1>
+  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Boneco Programador">
+</header>
+
+<nav>
+  <a href="index.html">Início</a>
+  <a href="sobre.html">Sobre Nós</a>
+  <a href="cursos.html">Cursos</a>
+  <a href="aulas.html">Aulas</a>
+  <a href="blog.html">Blog</a>
+  <a href="contato.html">Contato</a>    
+</nav>
+
+<section>
+<h2>🎓 Nossas Aulas</h2>
+
+<div class="cards">
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="HTML Icon">
+    <h3>HTML Completo</h3>
+    <p>Aprenda tudo sobre HTML, do básico às tags avançadas.</p>
+    <button onclick="toggleCourse('postHTML')">Ler mais</button>
+    <div id="postHTML" class="course-detalhado">
+      <h4>Guia Completo de HTML</h4>
+      <ol>
+        <li>Estrutura básica e tags essenciais</li>
+        <li>Formatação e semântica</li>
+        <li>Formulários e interatividade básica</li>
+        <li>Boas práticas e SEO</li>
+        <li>Recursos avançados: vídeo, áudio, iframe</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS Icon">
+    <h3>CSS Básico</h3>
+    <p>Aprenda a estilizar páginas HTML com CSS.</p>
+    <button onclick="toggleCourse('postCSS')">Ler mais</button>
+    <div id="postCSS" class="course-detalhado">
+      <h4>Introdução ao CSS</h4>
+      <ol>
+        <li>Vincule o CSS ao HTML</li>
+        <li>Seletores, cores, fontes e layout</li>
+        <li>Pseudo-classes e pseudo-elementos</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" alt="JS Icon">
+    <h3>JavaScript Básico</h3>
+    <p>Torne seu site interativo com JavaScript.</p>
+    <button onclick="toggleCourse('postJS')">Ler mais</button>
+    <div id="postJS" class="course-detalhado">
+      <h4>Introdução ao JavaScript</h4>
+      <ol>
+        <li>Incluindo JS no HTML</li>
+        <li>Variáveis, funções e eventos</li>
+        <li>Manipulação do DOM</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Git Icon">
+    <h3>Git e GitHub</h3>
+    <p>Aprenda controle de versão e colaboração.</p>
+    <button onclick="toggleCourse('postGit')">Ler mais</button>
+    <div id="postGit" class="course-detalhado">
+      <h4>Introdução ao Git</h4>
+      <ol>
+        <li>Instale o Git no computador</li>
+        <li>Comandos básicos: git init, git add, git commit, git push</li>
+        <li>Crie repositórios no GitHub e sincronize localmente</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<script>
+function toggleCourse(id) {
+  const course = document.getElementById(id);
+  course.classList.toggle('show');
+}
+</script>
+
+<footer>
+<p>&copy; 2025 Code++ | Ensino de Programação e TIC</p>
+</footer>
+
+</body>
+</html>

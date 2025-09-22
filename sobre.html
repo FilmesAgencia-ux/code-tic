@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre | Code++</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: 'Inter', sans-serif; background: #0f172a; color: #e2e8f0; line-height:1.6; }
+
+header {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+  position: relative;
+}
+header h1 { font-size: 2.8rem; margin-bottom:10px; }
+header img { position:absolute; right:16px; bottom:-10px; width:115px; }
+
+nav {
+  background:#1e293b;
+  padding:15px;
+  text-align:center;
+  position: sticky;
+  top:0;
+  z-index:1000;
+}
+nav a { color:#e2e8f0; margin:0 15px; text-decoration:none; font-weight:600; transition:0.3s; }
+nav a:hover { color:#6366f1; }
+
+section {
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+}
+section h2 { text-align:center; color:#a78bfa; margin-bottom:30px; font-size:2rem; }
+section p { margin-bottom:20px; }
+
+.cards {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap:20px;
+}
+
+.card {
+  background:#1e293b;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #334155;
+  text-align:center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(99,102,241,0.4);
+}
+.card img { width:100px; margin-bottom:15px; border-radius:50%; }
+
+footer {
+  background:#0f172a;
+  color:#94a3b8;
+  text-align:center;
+  padding:25px;
+  border-top:1px solid #334155;
+  margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Sobre a Code++</h1>
+  <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" alt="Boneco Programador">
+</header>
+
+<nav>
+  <a href="index.html">Início</a>
+  <a href="sobre.html">Sobre Nós</a>
+  <a href="cursos.html">Cursos</a>
+  <a href="aulas.html">Aulas</a>
+  <a href="blog.html">Blog</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<section>
+  <h2>🎯 Nossa Missão</h2>
+  <p>
+    Criamos a Code++ para <strong>ajudar pessoas a aprender programação de forma prática e acessível</strong>. 
+    Nosso objetivo é simplificar conceitos complexos e fornecer ferramentas para que qualquer pessoa possa crescer no mundo da tecnologia.
+  </p>
+
+  <h2>💡 Por Que Existimos</h2>
+  <p>
+    A tecnologia avança rapidamente, e muitas pessoas sentem dificuldade em acompanhar. Queremos ser um <strong>ponto de referência confiável</strong>, oferecendo conhecimento de qualidade, exemplos reais e suporte contínuo para todos que desejam aprender programação.
+  </p>
+
+ <h2>👨‍💻 Nossa Equipe</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Luke">
+      <h3>Luke</h3>
+      <p>CEO & Fundador</p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" alt="Ana">
+      <h1>EM BREVE!!!</h3>
+      <h3>Nome</h3>
+      <p>Cargo</p>
+
+</section>
+
+<footer>
+<p>&copy; 2025 Code++ | Ensino de Programação e TIC</p>
+</footer>
+
+</body>
+</html>

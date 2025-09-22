@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blogs | Code++</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: 'Inter', sans-serif; background:#0f172a; color:#e2e8f0; line-height:1.6; }
+
+header {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+  position:relative;
+}
+header h1 { font-size:2.8rem; margin-bottom:10px; }
+header img { position:absolute; right:50px; bottom:-10px; width:120px; }
+
+nav {
+  background:#1e293b;
+  padding:15px;
+  text-align:center;
+  position: sticky;
+  top:0;
+  z-index:1000;
+}
+nav a { color:#e2e8f0; margin:0 15px; text-decoration:none; font-weight:600; transition:0.3s; }
+nav a:hover { color:#6366f1; }
+
+section { max-width:900px; margin:40px auto; padding:20px; }
+section h2 { text-align:center; color:#a78bfa; margin-bottom:30px; font-size:2rem; }
+
+.cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px; }
+
+.card {
+  background:#1e293b;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #334155;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover { transform:translateY(-8px); box-shadow:0 10px 30px rgba(99,102,241,0.4); }
+.card img { width:60px; margin-bottom:15px; }
+
+button {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color:#fff;
+  padding:12px 25px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
+  margin-top:10px;
+}
+button:hover { background: linear-gradient(135deg, #4f46e5, #7c3aed); }
+
+.post-detalhado {
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition:max-height 0.5s ease, opacity 0.5s ease;
+  margin-top:15px;
+}
+.post-detalhado.show { max-height:1000px; opacity:1; }
+
+footer { background:#0f172a; color:#94a3b8; text-align:center; padding:25px; border-top:1px solid #334155; margin-top:40px; }
+
+.data-publicacao { font-size:0.9em; color:#cbd5e1; margin-bottom:10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Blog Code++</h1>
+  <img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" alt="Blog Icon">
+</header>
+
+<nav>
+  <a href="index.html">Início</a>
+  <a href="sobre.html">Sobre Nós</a>
+  <a href="cursos.html">Cursos</a>
+  <a href="aulas.html">Aulas</a>
+  <a href="blog.html">Blog</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<section>
+<h2>📰 Blogs</h2>
+
+<div class="cards">
+
+<div class="card">
+  <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" alt="Inteligência Artificial" style="width:60px; margin-bottom:15px;">
+  <h3>Avanços em Inteligência Artificial</h3>
+  <p class="data-publicacao">📅 Publicado em 21/09/2025</p>
+  <p>A IA continua revolucionando setores como saúde 🏥, educação 🎓 e finanças 💹, aumentando eficiência e automação 🤖.</p>
+  <button onclick="togglePost('noticiaIA')">Ler mais</button>
+  <div id="noticiaIA" class="post-detalhado">
+    <h4>📌 Destaques</h4>
+    <ul>
+      <li>🤖 Chatbots cada vez mais inteligentes.</li>
+      <li>📊 Análise preditiva em grandes volumes de dados.</li>
+      <li>⚖️ Discussões sobre ética e regulamentações emergentes.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Segurança Cibernética" style="width:60px; margin-bottom:15px;">
+  <h3>Tendências em Segurança Cibernética 2025</h3>
+  <p class="data-publicacao">📅 Publicado em 21/09/2025</p>
+  <p>O cenário de segurança digital 🔐 está mais desafiador, exigindo empresas preparadas para novas ameaças online 💻.</p>
+  <button onclick="togglePost('noticiaSeguranca')">Ler mais</button>
+  <div id="noticiaSeguranca" class="post-detalhado">
+    <h4>📌 Destaques</h4>
+    <ul>
+      <li>🛡️ Proteção avançada contra phishing e malware.</li>
+      <li>🔑 Autenticação multifator obrigatória.</li>
+      <li>⚡ Estratégias de resposta rápida a incidentes.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://cdn-icons-png.flaticon.com/128/5968/5968260.png" alt="Blockchain / Bitcoin" style="width:60px; margin-bottom:15px;">
+  <h3>Blockchain além do Bitcoin</h3>
+  <p class="data-publicacao">📅 Publicado em 21/09/2025</p>
+  <p>Blockchain se expande para contratos inteligentes 📜, logística 🚚 e rastreabilidade 🕵️, impactando vários setores 🌐.</p>
+  <button onclick="togglePost('noticiaBlockchain')">Ler mais</button>
+  <div id="noticiaBlockchain" class="post-detalhado">
+    <h4>📌 Destaques</h4>
+    <ul>
+      <li>📜 Contratos inteligentes seguros e automatizados.</li>
+      <li>🚚 Rastreabilidade de produtos em tempo real.</li>
+      <li>💼 Aplicações corporativas crescentes.</li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="https://cdn-icons-png.flaticon.com/512/727/727399.png" alt="Realidade Virtual" style="width:60px; margin-bottom:15px;">
+  <h3>Realidade Virtual e Educação</h3>
+  <p class="data-publicacao">📅 Publicado em 21/09/2025</p>
+  <p>VR transforma a forma de aprender 🧑‍🏫, criando experiências imersivas 🕶️ e interativas 🎮 para estudantes de todas as idades.</p>
+  <button onclick="togglePost('noticiaVR')">Ler mais</button>
+  <div id="noticiaVR" class="post-detalhado">
+    <h4>📌 Destaques</h4>
+    <ul>
+      <li>🎓 Simulações práticas de conteúdos complexos.</li>
+      <li>🕹️ Gamificação e engajamento aumentados.</li>
+      <li>🌐 Acesso remoto a laboratórios virtuais.</li>
+    </ul>
+  </div>
+</div>
+
+
+
+</div>
+</section>
+
+<script>
+function togglePost(id) {
+  const post = document.getElementById(id);
+  post.classList.toggle('show');
+}
+</script>
+
+<footer>
+<p>&copy; 2025 Code++ | Ensino de Programação e TIC</p>
+</footer>
+
+</body>
+</html>
